@@ -1,0 +1,28 @@
+# KQC Quantum Inc. (KQC): Investor Relations
+
+> Quantum computing, post-quantum security and AI infrastructure, deployed for industry. KQC Quantum Inc. is the Delaware parent company of Korea Quantum Computing Co., Ltd. (한국퀀텀컴퓨팅㈜), its operating company in the Republic of Korea, headquartered in Busan with an office in Seoul. Listing status: Business combination pending.
+
+## Pages
+- /index.html: Investor relations home (featured announcement, investor resources, email alerts, investor contact)
+- /presentations.html: Investor presentations
+- /filings.html: SEC filings
+- /webcasts.html: Webcasts and replays
+- /news.html: News and press coverage (links to the original publications)
+- /contact.html: Contact investor relations
+- /disclosure.html: Legal notices and sources
+
+## News
+- 2026-10-08: KQC Quantum, Inc. and Charlton Aria Acquisition Corporation Announce Investor Webcast to Review Proposed Business Combination (https://www.businesswire.com/news/home/20261008910978/en/KQC-Quantum-Inc.-and-Charlton-Aria-Acquisition-Corporation-Announce-Investor-Webcast-to-Review-Proposed-Business-Combination)
+- 2026-10-07: KQC Quantum, Inc. and Charlton Aria Acquisition Corporation Announce Definitive Business Combination Agreement to Take Korea’s Enterprise Quantum Computing and Quantum-Safe Security Company Public on Nasdaq (https://www.businesswire.com/news/home/20261007549201/en/KQC-Quantum-Inc.-and-Charlton-Aria-Acquisition-Corporation-Announce-Definitive-Business-Combination-Agreement-to-Take-Koreas-Enterprise-Quantum-Computing-and-Quantum-Safe-Security-Company-Public-on-Nasdaq)
+- 2026-06-30: KQC Launches KQC Qubiteer, a Quantum-AI Hybrid Optimization Platform (https://www.etnews.com/20260630000013)
+- 2026-06-04: KQC and LS ITC Complete Post-Quantum Cryptography Proof of Concept for Industrial Infrastructure (https://www.mt.co.kr/industry/2026/06/04/2026060409530962952)
+- 2026-05-27: In the News: KQC CTO Stephen Oh Says PQC-Native Hardware Is the Answer to the Post-Quantum Transition (https://www.ddaily.co.kr/page/view/2026052716082283402)
+- 2026-04-16: KQC Receives the Excellent Technology Award at the 2026 Korea Excellent Enterprise Awards (https://www.mt.co.kr/industry/2026/04/16/2026041612523010217)
+- 2026-03-13: KQC Earns the First ISO/IEC 27001 Certification in Korea's Quantum Computing Industry (https://www.todayenergy.kr/news/articleView.html?idxno=295122)
+- 2025-12-09: KQC Validates Post-Quantum Cryptography with IBK Industrial Bank in Successful Proof of Concept (https://www.etnews.com/20251209000100)
+- 2025-11-20: KQC and Quantum AI Sign MOU to Offer AI Services on KQC H200 Infrastructure (https://www.venturesquare.net/1015228)
+- 2025-10-15: KQC Expands Quantum Computing into Life Sciences through Partnership with the Korean Society of Bioinformatics (https://www.ebn.co.kr/news/articleView.html?idxno=1682211)
+- 2025-07-23: KQC and Crypto4A Form Strategic Partnership to Commercialize Korea's First PQC-Based Security Solutions (https://www.etnews.com/20250723000230)
+- 2025-07-10: KQC and KIOST Sign MOU to Advance Quantum Computing Applications in Marine Science (https://zdnet.co.kr/view/?no=20250710160445)
+- 2025-07-03: KQC Launches AI GPU Farm and GPU-as-a-Service Built on NVIDIA H200 (https://zdnet.co.kr/view/?no=20250703101837)
+- 2024-01-29: Korea Quantum Computing and IBM Collaborate to Bring IBM watsonx and Quantum Computing to Korea (https://newsroom.ibm.com/2024-01-29-Korea-Quantum-Computing-and-IBM-Collaborate-to-Bring-IBM-watsonx-and-Quantum-Computing-to-Korea)

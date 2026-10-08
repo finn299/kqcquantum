@@ -1,0 +1,93 @@
+# Render blueprint for the KQC investor-relations site. Two services deploy from this repository:
+#
+#   1. kqc-quantum-preview  (web service, free)   password-protected review copy of the full build.
+#      node server.js fronts the repository root; the password is a SHA-256 hash in server.js
+#      (override with PREVIEW_PASSWORD, empty string disables the gate).
+#
+#   2. kqc-quantum-live     (static site, free)   the production site, where kqcquantum.com points.
+#      Until the go-live, it publishes the holding/ folder (a "coming soon" page, noindex), so the domain,
+#      DNS and TLS are in place without exposing the site. To go live: set staticPublishPath to "."
+#      (dashboard: Settings > Publish directory, or here), set PUBLIC_INDEXING = True in tools/content.py,
+#      rebuild and push.
+#
+# Both were created in the Render dashboard; this file documents the configuration. The redirect, rewrite and
+# header rules below were entered in the dashboard on Oct 6, 2026 (Redirects/Rewrites and Headers tabs), and the
+# custom domains kqcquantum.com + www.kqcquantum.com (www redirects to the apex) were added the same day.
+#
+# DNS records Render asks for (at the registrar / DNS host of kqcquantum.com):
+#   www.kqcquantum.com   CNAME   kqc-quantumkqc-quantum.onrender.com
+#   kqcquantum.com       ALIAS/ANAME/flattened CNAME   kqc-quantumkqc-quantum.onrender.com
+#                        or, if the DNS host only supports A records at the apex:   A   216.24.57.1
+# Render verifies the records and issues the TLS certificate on its own once they propagate.
+services:
+  - type: web
+    name: kqc-quantum-preview
+    runtime: node
+    plan: free
+    buildCommand: ""
+    startCommand: node server.js
+    healthCheckPath: /__health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+
+  - type: web
+    name: kqc-quantum-live
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: holding          # change to "." at go-live
+    autoDeploy: true
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+    routes:
+      # old preview addresses
+      - type: redirect
+        source: /investors
+        destination: /
+      - type: redirect
+        source: /investors.html
+        destination: /
+      - type: redirect
+        source: /investor
+        destination: /
+      - type: redirect
+        source: /investor.html
+        destination: /
+      - type: redirect
+        source: /press
+        destination: /news.html
+      - type: redirect
+        source: /press.html
+        destination: /news.html
+      # press-release address for the webcast (singular), see webcast.html
+      - type: rewrite
+        source: /webcast
+        destination: /webcasts.html
+      # clean URLs, same as the preview server offers
+      - type: rewrite
+        source: /presentations
+        destination: /presentations.html
+      - type: rewrite
+        source: /filings
+        destination: /filings.html
+      - type: rewrite
+        source: /webcasts
+        destination: /webcasts.html
+      - type: rewrite
+        source: /news
+        destination: /news.html
+      - type: rewrite
+        source: /contact
+        destination: /contact.html
+      - type: rewrite
+        source: /disclosure
+        destination: /disclosure.html

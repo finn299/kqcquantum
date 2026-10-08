@@ -1,0 +1,11 @@
+{
+  "name": "kqc-quantum-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Korea Quantum Computing corporate + investor relations site. Static HTML; server.js adds a password gate for preview hosting.",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "build": "python3 tools/build.py"
+  }
+}

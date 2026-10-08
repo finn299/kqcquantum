@@ -1,0 +1,9 @@
+# Not part of the public site (Vercel serves the repository root as static files, see vercel.json)
+server.js
+package.json
+package-lock.json
+render.yaml
+README.md
+tools/
+holding/
+.gitignore
