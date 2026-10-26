@@ -1,0 +1,91 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "builds": [
+    {
+      "src": "**",
+      "use": "@vercel/static"
+    }
+  ],
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/investors",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/investors.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/investor",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/investor.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/press",
+      "destination": "/news.html",
+      "permanent": true
+    },
+    {
+      "source": "/press.html",
+      "destination": "/news.html",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/webcast",
+      "destination": "/webcasts.html"
+    },
+    {
+      "source": "/presentations",
+      "destination": "/presentations.html"
+    },
+    {
+      "source": "/filings",
+      "destination": "/filings.html"
+    },
+    {
+      "source": "/webcasts",
+      "destination": "/webcasts.html"
+    },
+    {
+      "source": "/news",
+      "destination": "/news.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/disclosure",
+      "destination": "/disclosure.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    }
+  ]
+}

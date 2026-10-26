@@ -1,0 +1,114 @@
+# Twice-daily disclosure poll for kqcquantum.com.
+#
+# 9 AM and 5 PM Eastern, every day: pull anything new from SEC EDGAR (Charlton Aria now, KQC Quantum Inc. once it
+# has its own CIK) and from Business Wire (KQC press releases), rebuild the site, commit to this repository, then
+# publish the snapshot to the repository Vercel serves kqcquantum.com from (finn299/kqcquantum), exactly as
+# tools/push-live.sh does by hand.
+#
+# GitHub cron runs in UTC and has no notion of daylight saving, so the job is scheduled at both possible UTC hours
+# and the first step checks the clock in America/New_York. "Run workflow" (workflow_dispatch) always runs.
+#
+# One secret is required for the live publish step:  LIVE_PUSH_TOKEN
+#   a GitHub personal access token (classic, scope "repo") belonging to an account with push access to
+#   finn299/kqcquantum. Settings -> Secrets and variables -> Actions -> New repository secret.
+#   Without it the run still updates this repository and prints a warning; publish by hand with tools/push-live.sh.
+
+name: Disclosures (EDGAR + Business Wire)
+
+on:
+  schedule:
+    - cron: "0 13,14,21,22 * * *"   # 9 AM / 5 PM Eastern in both EDT (13/21 UTC) and EST (14/22 UTC)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run: fetch and report only, change nothing"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: disclosures
+  cancel-in-progress: false
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Is it 9 AM or 5 PM Eastern?
+        id: gate
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          H=$(TZ=America/New_York date +%H)
+          if [ "$EVENT" = "workflow_dispatch" ] || [ "$H" = "09" ] || [ "$H" = "17" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "Eastern hour $H: polling."
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Eastern hour $H is not a scheduled hour (the other UTC slot covers the current DST offset). Nothing to do."
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Offline checks
+        if: steps.gate.outputs.run == 'true'
+        run: python3 -I tools/tests/test_poll_disclosures.py
+
+      - name: Poll EDGAR and Business Wire, rebuild the site
+        if: steps.gate.outputs.run == 'true'
+        id: poll
+        env:
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          if [ "$DRY_RUN" = "true" ]; then
+            python3 tools/poll_disclosures.py --dry-run
+          else
+            python3 tools/poll_disclosures.py
+          fi
+
+      - name: Commit to this repository
+        if: steps.gate.outputs.run == 'true' && steps.poll.outputs.changed == 'true'
+        env:
+          SUMMARY: ${{ steps.poll.outputs.summary }}
+        run: |
+          git config user.name "KQC IR disclosures"
+          git config user.email "ir@kqcquantum.com"
+          git add -A
+          git commit -m "Disclosures: ${SUMMARY}"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Publish the snapshot to kqcquantum.com (finn299/kqcquantum)
+        if: steps.gate.outputs.run == 'true' && steps.poll.outputs.publish == 'true'
+        env:
+          LIVE_PUSH_TOKEN: ${{ secrets.LIVE_PUSH_TOKEN }}
+        run: |
+          if [ -z "$LIVE_PUSH_TOKEN" ]; then
+            echo "::warning::LIVE_PUSH_TOKEN is not set, so kqcquantum.com was not updated. Run tools/push-live.sh locally, or add the secret (see the comment at the top of this workflow)."
+            exit 0
+          fi
+          tools/push-live.sh "https://x-access-token:${LIVE_PUSH_TOKEN}@github.com/finn299/kqcquantum.git"
+
+      - name: Summary
+        if: steps.gate.outputs.run == 'true'
+        env:
+          SUMMARY: ${{ steps.poll.outputs.summary }}
+          CHANGED: ${{ steps.poll.outputs.changed }}
+          PUBLISH: ${{ steps.poll.outputs.publish }}
+        run: |
+          {
+            echo "### Disclosure poll"
+            echo ""
+            if [ "$PUBLISH" = "true" ]; then echo "**Site updated:** $SUMMARY"; elif [ "$CHANGED" = "true" ]; then echo "Bookkeeping only ($SUMMARY)."; else echo "Nothing new ($SUMMARY)."; fi
+          } >> "$GITHUB_STEP_SUMMARY"

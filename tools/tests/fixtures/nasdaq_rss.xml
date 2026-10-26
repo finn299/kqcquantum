@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:nasdaq="https://www.nasdaq.com/">
+<channel>
+<title>Nasdaq: CHAR</title>
+<link>https://www.nasdaq.com/</link>
+<item>
+<title>KQC Quantum, Inc. and Charlton Aria Acquisition Corporation Announce Shareholder Approval of Business Combination Deadline Extension</title>
+<link>https://www.nasdaq.com/press-release/kqc-quantum-inc-and-charlton-aria-acquisition-corporation-announce-shareholder</link>
+<pubDate>Thu, 22 Oct 2026 20:10:00 +0000</pubDate>
+<dc:creator></dc:creator>
+<category></category>
+<nasdaq:tickers>CHAR,CHARU</nasdaq:tickers>
+<description>&lt;p&gt;Shareholder approvals would extend the business combination deadline through up to October 25, 2027.&lt;/p&gt;</description>
+</item>
+<item>
+<title>KQC Quantum, Inc. and Charlton Aria Acquisition Corporation Announce Investor Webcast to Review Proposed Business Combination</title>
+<link>https://www.nasdaq.com/press-release/kqc-quantum-inc-and-charlton-aria-acquisition-corporation-announce-investor-webcast</link>
+<pubDate>Thu, 08 Oct 2026 10:30:00 +0000</pubDate>
+<nasdaq:tickers>CHAR,CHARU</nasdaq:tickers>
+<description>The investor webcast is set for October 8, 2026, at 10:30 a.m. Eastern Time.</description>
+</item>
+<item>
+<title>Charlton Aria Acquisition Corporation Announces Extension of the Deadline for an Initial Business Combination</title>
+<link>https://www.nasdaq.com/press-release/charlton-aria-acquisition-corporation-announces-extension-deadline-initial-business</link>
+<pubDate>Wed, 05 Aug 2026 12:30:00 +0000</pubDate>
+<nasdaq:tickers>CHAR,CHARU</nasdaq:tickers>
+<description>On August 3, 2026, ST Sponsor II Limited deposited $850,000 into the trust account.</description>
+</item>
+</channel>
+</rss>

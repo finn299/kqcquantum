@@ -1,0 +1,247 @@
+{
+ "_comment": "SEC filings shown on filings.html. Maintained by tools/poll_disclosures.py (appends new EDGAR filings; never rewrites an existing entry) and editable by hand. Newest first. 'ciks' holds registrants discovered automatically (KQC Quantum Inc. once it has its own CIK).",
+ "updated": "2026-10-26T17:34:28Z",
+ "ciks": {},
+ "filings": [
+  {
+   "accession": "0001213900-26-112215",
+   "cik": "0002024459",
+   "filer": "Charlton Aria",
+   "form": "8-K",
+   "date": "2026-10-26",
+   "period": "2026-10-23",
+   "items": [
+    "3.01"
+   ],
+   "desc": "Current report: notice of delisting or failure to satisfy a listing standard",
+   "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026112215/ea0309536-8k_charlton.htm",
+   "index": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026112215/0001213900-26-112215-index.htm",
+   "exhibits": [],
+   "source": "edgar",
+   "added": "2026-10-26T17:34:25Z"
+  },
+  {
+   "accession": "0001213900-26-111717",
+   "cik": "0002024459",
+   "filer": "Charlton Aria",
+   "form": "425",
+   "date": "2026-10-22",
+   "period": "",
+   "items": [],
+   "desc": "Communication regarding the proposed business combination (Rule 425): the Form 8-K of October 22, 2026 reporting the shareholder vote on the deadline extension, and its exhibits",
+   "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026111717/ea0309338-8k425_charlton.htm",
+   "index": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026111717/0001213900-26-111717-index.htm",
+   "exhibits": [
+    {
+     "type": "EX-3.1",
+     "desc": "Amendment to the Second Amended and Restated Memorandum and Articles of Association of the Company",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026111717/ea030933801ex3-1.htm"
+    },
+    {
+     "type": "EX-10.1",
+     "desc": "Amendment to the Investment Management Trust Agreement, by and between the Company and the Trustee",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026111717/ea030933801ex10-1.htm"
+    }
+   ],
+   "source": "edgar",
+   "added": "2026-10-23T19:40:00Z"
+  },
+  {
+   "accession": "0001213900-26-111715",
+   "cik": "0002024459",
+   "filer": "Charlton Aria",
+   "form": "8-K",
+   "date": "2026-10-22",
+   "period": "2026-10-19",
+   "items": [
+    "1.01",
+    "3.03",
+    "5.03",
+    "5.07",
+    "8.01",
+    "9.01"
+   ],
+   "desc": "Current report: results of the October 19, 2026 extraordinary general meeting. Shareholders approved extending the business combination deadline from October 25, 2026 to as late as October 25, 2027 in monthly extensions, with amendments to the articles of association and the trust agreement; holders of 5,725,962 Class A shares exercised redemption rights",
+   "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026111715/ea0309338-8k425_charlton.htm",
+   "index": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026111715/0001213900-26-111715-index.htm",
+   "exhibits": [
+    {
+     "type": "EX-3.1",
+     "desc": "Amendment to the Second Amended and Restated Memorandum and Articles of Association of the Company",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026111715/ea030933801ex3-1.htm"
+    },
+    {
+     "type": "EX-10.1",
+     "desc": "Amendment to the Investment Management Trust Agreement, by and between the Company and the Trustee",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026111715/ea030933801ex10-1.htm"
+    }
+   ],
+   "source": "edgar",
+   "added": "2026-10-23T19:40:00Z"
+  },
+  {
+   "accession": "0001213900-26-107746",
+   "cik": "0002024459",
+   "filer": "Charlton Aria",
+   "form": "425",
+   "date": "2026-10-08",
+   "period": "",
+   "items": [],
+   "desc": "Communication regarding the proposed business combination (Rule 425): the investor presentation and the script of the October 8, 2026 investor webcast",
+   "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107746/ea0307998-8k425_charlton.htm",
+   "index": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107746/0001213900-26-107746-index.htm",
+   "exhibits": [
+    {
+     "type": "EX-99.1",
+     "desc": "Investor presentation, dated October 2026",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107746/ea030799801ex99-1.htm"
+    },
+    {
+     "type": "EX-99.2",
+     "desc": "Script to investor presentation",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107746/ea030799801ex99-2.htm"
+    }
+   ],
+   "source": "edgar",
+   "added": "2026-10-23T19:40:00Z"
+  },
+  {
+   "accession": "0001213900-26-107744",
+   "cik": "0002024459",
+   "filer": "Charlton Aria",
+   "form": "8-K",
+   "date": "2026-10-08",
+   "period": "2026-10-07",
+   "items": [
+    "7.01",
+    "9.01"
+   ],
+   "desc": "Current report (Regulation FD): investor presentation dated October 2026 and the script of the October 8, 2026 investor webcast on the proposed business combination",
+   "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107744/ea0307998-8k425_charlton.htm",
+   "index": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107744/0001213900-26-107744-index.htm",
+   "exhibits": [
+    {
+     "type": "EX-99.1",
+     "desc": "Investor presentation, dated October 2026",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107744/ea030799801ex99-1.htm"
+    },
+    {
+     "type": "EX-99.2",
+     "desc": "Script to investor presentation",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107744/ea030799801ex99-2.htm"
+    }
+   ],
+   "source": "edgar",
+   "added": "2026-10-23T19:40:00Z"
+  },
+  {
+   "accession": "0001213900-26-107429",
+   "cik": "0002024459",
+   "filer": "Charlton Aria",
+   "form": "DEF 14A",
+   "date": "2026-10-07",
+   "period": "2026-10-19",
+   "items": [],
+   "desc": "Definitive proxy statement: extraordinary general meeting of October 19, 2026 to extend the business combination deadline",
+   "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107429/ea0307635-def14a_charlton.htm",
+   "index": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107429/0001213900-26-107429-index.htm",
+   "exhibits": [],
+   "source": "edgar",
+   "added": "2026-10-07T00:00:00Z"
+  },
+  {
+   "accession": "0001213900-26-107415",
+   "cik": "0002024459",
+   "filer": "Charlton Aria",
+   "form": "425",
+   "date": "2026-10-07",
+   "period": "",
+   "items": [],
+   "desc": "Communication regarding the proposed business combination (Rule 425): the Form 8-K of October 7, 2026 announcing the Business Combination Agreement, and its exhibits including the joint press release",
+   "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107415/ea0307796-8k425_charlton.htm",
+   "index": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107415/0001213900-26-107415-index.htm",
+   "exhibits": [
+    {
+     "type": "EX-2.1",
+     "desc": "Business Combination Agreement, dated as of October 6, 2026, by and among the Company, Parent, Merger Sub and, for the limited purposes specified therein, KQC Korea and the Sponsor",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107415/ea030779601ex2-1.htm"
+    },
+    {
+     "type": "EX-10.1",
+     "desc": "Sponsor Support Agreement, dated October 6, 2026, by and among the Company, Parent and the Sponsor",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107415/ea030779601ex10-1.htm"
+    },
+    {
+     "type": "EX-10.2",
+     "desc": "Parent Support Agreement, dated October 6, 2026, by and among the Company, Parent and the stockholders of Parent party thereto",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107415/ea030779601ex10-2.htm"
+    },
+    {
+     "type": "EX-99.1",
+     "desc": "Press release dated October 7, 2026",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107415/ea030779601ex99-1.htm"
+    }
+   ],
+   "source": "edgar",
+   "added": "2026-10-07T00:00:00Z"
+  },
+  {
+   "accession": "0001213900-26-107409",
+   "cik": "0002024459",
+   "filer": "Charlton Aria",
+   "form": "8-K",
+   "date": "2026-10-07",
+   "period": "2026-10-06",
+   "items": [
+    "1.01",
+    "7.01",
+    "9.01"
+   ],
+   "desc": "Current report: Business Combination Agreement, Sponsor Support Agreement, Parent Support Agreement and the joint press release announcing the proposed business combination",
+   "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107409/ea0307796-8k425_charlton.htm",
+   "index": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107409/0001213900-26-107409-index.htm",
+   "exhibits": [
+    {
+     "type": "EX-2.1",
+     "desc": "Business Combination Agreement, dated as of October 6, 2026, by and among the Company, Parent, Merger Sub and, for the limited purposes specified therein, KQC Korea and the Sponsor",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107409/ea030779601ex2-1.htm"
+    },
+    {
+     "type": "EX-10.1",
+     "desc": "Sponsor Support Agreement, dated October 6, 2026, by and among the Company, Parent and the Sponsor",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107409/ea030779601ex10-1.htm"
+    },
+    {
+     "type": "EX-10.2",
+     "desc": "Parent Support Agreement, dated October 6, 2026, by and among the Company, Parent and the stockholders of Parent party thereto",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107409/ea030779601ex10-2.htm"
+    },
+    {
+     "type": "EX-99.1",
+     "desc": "Press release dated October 7, 2026",
+     "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026107409/ea030779601ex99-1.htm"
+    }
+   ],
+   "source": "edgar",
+   "added": "2026-10-07T00:00:00Z"
+  },
+  {
+   "accession": "0001213900-26-102408",
+   "cik": "0002024459",
+   "filer": "Charlton Aria",
+   "form": "PRE 14A",
+   "date": "2026-09-23",
+   "period": "2026-09-23",
+   "items": [],
+   "desc": "Preliminary proxy statement: extension of the business combination deadline",
+   "href": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026102408/ea0306158-pre14a_charlton.htm",
+   "index": "https://www.sec.gov/Archives/edgar/data/2024459/000121390026102408/0001213900-26-102408-index.htm",
+   "exhibits": [],
+   "source": "edgar",
+   "added": "2026-09-23T00:00:00Z"
+  }
+ ],
+ "tickers": {
+  "0002024459": "CHAR"
+ }
+}
